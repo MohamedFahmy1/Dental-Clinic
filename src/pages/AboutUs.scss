@@ -1,0 +1,40 @@
+@import "../styles/sass/helpers/variables";
+@import "../styles/sass/helpers/mixins";
+
+.aboutus {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @include average-screen {
+    padding-top: 50px;
+  }
+  & .container {
+    display: flex;
+    gap: 40px;
+    @include average-screen {
+      flex-wrap: wrap;
+    }
+    & img {
+      max-width: 100%;
+    }
+    & .mainHeading {
+      & h1 {
+        font-size: 55px;
+        @include average-screen {
+          font-size: 40px;
+        }
+      }
+      & span {
+        display: block;
+        color: #787878;
+        font-family: Roboto, sans-serif;
+        line-height: 1.8;
+        margin-top: 25px;
+        margin-bottom: 15px;
+      }
+      & button {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

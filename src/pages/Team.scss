@@ -1,0 +1,61 @@
+@import "../styles/sass/helpers/variables";
+@import "../styles/sass/helpers/mixins";
+
+.team {
+  padding-top: 20px;
+  padding-bottom: 80px;
+  text-align: center;
+  & .container {
+    & h1 {
+      font-size: 60px;
+      @include average-screen {
+        font-size: 40px;
+      }
+    }
+    & .boxContainer {
+      display: flex;
+      gap: 40px;
+      @include average-screen {
+        scroll-snap-type: inline mandatory;
+        overflow-x: auto;
+        margin-block-end: -20px;
+        padding-block-end: 40px;
+        margin-inline: 56px;
+      }
+      & .box {
+        padding: 30px;
+        border: 1px solid #d6d6d6;
+        border-radius: 4px;
+        & img {
+          max-width: 100%;
+        }
+        & h3 {
+          font-size: 24px;
+          color: $main-color;
+        }
+        & .social {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          & .icon {
+            background-color: #d9e0f7;
+            color: #365ed9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: $main-transition;
+            &:hover {
+              color: white;
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

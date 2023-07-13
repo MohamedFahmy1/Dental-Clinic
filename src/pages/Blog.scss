@@ -1,0 +1,90 @@
+@import "../styles/sass/helpers/variables";
+@import "../styles/sass/helpers/mixins";
+
+.blog {
+  padding-bottom: 50px;
+  & .container {
+    & .mainHeading {
+      text-align: center;
+      & h1 {
+        font-size: 55px;
+        @include average-screen {
+          font-size: 40px;
+        }
+      }
+    }
+    & .boxContainer {
+      display: flex;
+      gap: 30px;
+      @include average-screen {
+        flex-wrap: wrap;
+      }
+      & .box {
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 2px 60px 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        & .dateCard {
+          position: absolute;
+          width: fit-content;
+          padding: 10px;
+          background-color: $main-color;
+          border-radius: 6px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          bottom: 310px;
+          left: 25px;
+          align-items: center;
+          & .icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+          }
+          & p {
+            margin: 0;
+            font-family: Roboto, sans-serif;
+          }
+        }
+        & img {
+          max-width: 100%;
+        }
+        & .text {
+          padding: 30px;
+          & h2 {
+            margin: 0;
+            font-size: 26px;
+            color: $black-color;
+          }
+          & p {
+            color: #787878;
+            font-family: Roboto, sans-serif;
+            margin: 15px 0;
+            line-height: 1.7;
+          }
+          & span {
+            cursor: pointer;
+            font-weight: 500;
+            display: block;
+            position: relative;
+            width: fit-content;
+            color: $main-color;
+            &::after {
+              @include abs-x;
+              bottom: -10px;
+              width: 100%;
+              height: 3px;
+              background-color: $main-color;
+            }
+            &:hover {
+              color: $black-color;
+              &::after {
+                background-color: $black-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

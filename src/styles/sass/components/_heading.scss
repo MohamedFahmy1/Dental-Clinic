@@ -1,0 +1,16 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.mainHeading {
+  & p {
+    font-size: 22px;
+    font-weight: 700;
+    color: $main-color;
+  }
+  & h1 {
+    font-size: 73px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: $black-color;
+  }
+}

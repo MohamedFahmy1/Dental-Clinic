@@ -1,0 +1,132 @@
+@import "../styles/sass/helpers/variables";
+@import "../styles/sass/helpers/mixins";
+
+.homepage {
+  background-image: url(../images/homebackgorund.png);
+  background-size: cover;
+  transition: 1s;
+  & .container {
+    & .firstSection {
+      padding-top: 120px;
+      display: flex;
+      @include average-screen {
+        flex-wrap: wrap;
+        padding-top: 40px;
+      }
+      & .left {
+        width: 100%;
+        & .mainHeading {
+          @include average-screen {
+            & h1 {
+              font-size: 36px;
+            }
+            & p {
+              font-size: 18px;
+            }
+          }
+        }
+        & > p {
+          font-family: "Roboto", sans-serif;
+          color: #787878;
+          font-size: 16px;
+          margin-bottom: 40px;
+        }
+        & form {
+          padding: 15px;
+          border-radius: 6px;
+          background-color: white;
+          max-width: fit-content;
+          min-width: 400px;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+          margin-bottom: 140px;
+
+          @include large-screen {
+            margin-bottom: 140px;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+          }
+          & input[type="email"] {
+            background-color: #f7f7f7;
+            width: 350px;
+            outline: none;
+            border: none;
+            @include large-screen {
+              width: 100%;
+            }
+          }
+          & input {
+            padding: 25px;
+            @include large-screen {
+              min-width: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+      & .right {
+        position: relative;
+        top: -100px;
+        left: 70px;
+        @include average-screen {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        & img {
+          width: 525px;
+          height: 755px;
+          @include average-screen {
+            width: 340px;
+            height: 486px;
+          }
+        }
+      }
+    }
+  }
+  & .secondSection {
+    background-color: $black-color;
+    height: 425px;
+    @include large-screen {
+      height: fit-content;
+    }
+    & .container {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      @include average-screen {
+        flex-wrap: wrap;
+        gap: 0;
+      }
+      & .left {
+        position: relative;
+        top: -120px;
+        @include average-screen {
+          top: 0;
+          margin-top: 50px;
+        }
+        & img {
+          width: 535px;
+          height: 545px;
+          @include average-screen {
+            width: 340px;
+            height: 346px;
+          }
+        }
+      }
+      & .right {
+        margin-top: 65px;
+        margin-bottom: 65px;
+        & p {
+          color: #365ed9;
+          font-weight: 700;
+          font-size: 22px;
+        }
+        & h2 {
+          color: white;
+          font-size: 48px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

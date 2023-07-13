@@ -1,0 +1,128 @@
+@import "../styles/sass/helpers/variables";
+@import "../styles/sass/helpers/mixins";
+
+footer {
+  & .content {
+    padding-top: 125px;
+    padding-bottom: 125px;
+    background-color: #00173d;
+    color: $white-color;
+    @include large-screen {
+      padding: 50px 0;
+    }
+    & .container {
+      display: grid;
+      grid-template-columns: 350px 200px 200px 250px;
+      column-gap: 40px;
+      @include large-screen {
+        grid-template-columns: 350px;
+      }
+      & .brandSection {
+        width: 100%;
+        & h3 {
+          font-size: 34px;
+          font-weight: 800;
+          color: white;
+        }
+        & > p {
+          font-family: Roboto, sans-serif;
+          color: $white-color;
+          line-height: 1.5;
+        }
+        & .time {
+          display: flex;
+          align-items: center;
+          & .icon {
+            background-image: linear-gradient(90deg, #0a99e6 0, #365ed9 100%);
+            padding: 10px;
+            border-radius: 50%;
+            @include center;
+            color: white;
+          }
+          & .info {
+            margin-left: 20px;
+          }
+        }
+      }
+      & .section {
+        & h3 {
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        & li {
+          padding: 15px;
+          position: relative;
+          cursor: pointer;
+          &:hover {
+            color: white;
+          }
+          &::before {
+            @include abs-y;
+            width: 10px;
+            height: 1px;
+            background-color: $main-color;
+            left: -5px;
+          }
+          & a {
+            color: $white-color;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+      & .contactSection {
+        & h3 {
+          color: white;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        & ul {
+          & li {
+            padding: 15px;
+            padding-left: 0;
+            display: flex;
+            align-items: center;
+            & .icon {
+              background-image: linear-gradient(90deg, #0a99e6 0, #365ed9 100%);
+              padding: 10px;
+              margin-right: 10px;
+              border-radius: 50%;
+              @include center;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .copywrite {
+    background-color: rgb(8, 23, 48);
+    color: white;
+    & .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      & span {
+        color: $main-color;
+      }
+      & .social {
+        display: flex;
+        gap: 20px;
+        & .icon {
+          background-color: rgba(255, 255, 255, 0.2);
+          padding: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          &:hover {
+            background-image: linear-gradient(90deg, #0a99e6 0, #365ed9 100%);
+          }
+        }
+      }
+    }
+  }
+}

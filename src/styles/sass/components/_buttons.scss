@@ -1,0 +1,19 @@
+/* Start Button */
+.main-btn {
+  color: white;
+  background-image: linear-gradient(90deg, #0a99e6 0, #365ed9 100%);
+  border: none;
+  border-radius: 6px;
+  padding: 18px 30px;
+  &:hover,
+  &:active,
+  &:focus {
+    background-image: linear-gradient(270deg, #0a99e6 0, #365ed9 100%);
+  }
+}
+.main-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* End Button */

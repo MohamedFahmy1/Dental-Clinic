@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap");
+@import "../helpers/variables";
+/* Start Global Rules */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button.scroll {
+  padding: 10px;
+  background-color: $main-color;
+  position: fixed;
+  bottom: 25px;
+  right: -50px;
+  border-radius: 4px;
+  border: none;
+  z-index: 9999;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+button.scroll.active {
+  right: 20px;
+}
+/* End Global Rules */

@@ -2,7 +2,7 @@ import about from "../images/about.png";
 import "./AboutUs.scss";
 const AboutUs = () => {
   return (
-    <div className="aboutus">
+    <main className="aboutus">
       <div className="container">
         <img src={about} alt="about" />
         <div className="mainHeading">
@@ -23,7 +23,7 @@ const AboutUs = () => {
           <button className="main-btn">READ MORE</button>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -12,7 +12,7 @@ import team3 from "../images/team3.png";
 import team4 from "../images/team4.png";
 const Team = () => {
   return (
-    <div className="team">
+    <main className="team">
       <div className="container">
         <div className="mainHeading">
           <p>OUR DOCTOR</p>
@@ -61,7 +61,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

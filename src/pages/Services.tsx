@@ -9,7 +9,7 @@ import "./Services.scss";
 
 const Services = () => {
   return (
-    <div className="services">
+    <main className="services">
       <div className="container">
         <div className="mainHeading">
           <p>OUR SERVICES</p>
@@ -79,7 +79,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

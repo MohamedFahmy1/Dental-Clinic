@@ -3,12 +3,12 @@ import doctorImage from "../../images/doc1.png";
 
 const FirstSection = () => {
   return (
-    <div className="firstSection">
+    <article className="firstSection">
       <div className="left">
-        <div className="mainHeading">
+        <section className="mainHeading">
           <p>WELCOME TO Dr.Corneaud Dental Clinic</p>
           <h1>We Are The Best Dental Service</h1>
-        </div>
+        </section>
         <p>
           Donec vitae libero non enim placerat eleifend aliquam erat volutpat.
           Curabitur diam ex, dapibus purus sapien, cursus sed nisl tristique,
@@ -28,10 +28,10 @@ const FirstSection = () => {
           />
         </form>
       </div>
-      <div className="right">
+      <section className="right">
         <img src={doctorImage} alt="Doctor" />
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 
